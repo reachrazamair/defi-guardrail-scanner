@@ -15,12 +15,12 @@ OverflowSentinel is a proof-of-concept static analyzer that detects boundary-che
 ```bash
 npm install
 npm run build
-node dist/index.js fixtures/move/vulnerable.move
-node dist/index.js fixtures/move/safe.move
-node dist/index.js fixtures/solidity/vulnerable.sol
-node dist/index.js fixtures/solidity/safe.sol
-node dist/index.js fixtures/rust/vulnerable.rs
-node dist/index.js fixtures/rust/safe.rs
+npm run scan:vulnerable
+npm run scan:safe
+npm run scan:vulnerable:solidity
+npm run scan:safe:solidity
+npm run scan:vulnerable:solana
+npm run scan:safe:solana
 ```
 
 ## Expected Output
