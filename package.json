@@ -1,0 +1,21 @@
+{
+  "name": "overflow-sentinel",
+  "version": "1.0.0",
+  "description": "PoC static analyzer for boundary-check overflow risks in smart contracts",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "scan:vulnerable": "npm run build && node dist/index.js fixtures/move/vulnerable.move",
+    "scan:safe": "npm run build && node dist/index.js fixtures/move/safe.move",
+    "scan:vulnerable:solidity": "npm run build && node dist/index.js fixtures/solidity/vulnerable.sol",
+    "scan:safe:solidity": "npm run build && node dist/index.js fixtures/solidity/safe.sol",
+    "scan:vulnerable:solana": "npm run build && node dist/index.js fixtures/rust/vulnerable.rs",
+    "scan:safe:solana": "npm run build && node dist/index.js fixtures/rust/safe.rs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  }
+}
